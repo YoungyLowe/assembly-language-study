@@ -1,14 +1,9 @@
 assume cs:code,ss:stack
-data segment
-    dw 8 dup (0)
-data ends
 stack segment
     dw 8 dup (0)
 stack ends
 code segment
-start:  mov ax,data
-        mov ds,ax
-        mov ax,stack
+start:  mov ax,stack
         mov ss,ax
         mov sp,16
 
